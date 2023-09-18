@@ -1,0 +1,564 @@
+/* fonts used */
+@font-face {
+  font-family: Sugar Bomb;
+  src: url('/assets/fonts/Sugar\ Bomb.ttf');
+}
+
+@font-face {
+  font-family: Chewy;
+  src: url('/assets/fonts/Chewy.ttf');
+}
+
+@font-face {
+  font-family: Anime Ace;
+  src: url('/assets/fonts/Anime\ Ace.ttf');
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(./assets/background/background-rural-cropped.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+#opening-bg {
+  display: none;
+}
+/*--------------------------- HOME PAGE-------------------------*/
+
+#start-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.covid-rush-logo {
+  width: 37.5rem;
+}
+
+/* covid rush buttons start */
+.buttons-start a {
+  text-decoration: none;
+  color:#FFD52D;
+}
+
+.buttons-start {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-btn {
+  background-color: #D2570C;
+  width: 15.63rem;
+  border: none;
+  padding: 0.25em;
+  box-shadow: 21px 12px 24px rgba(0, 0, 0, 0.25), inset 22px 14px 38px -11px rgba(0, 0, 0, 0.43);
+  border-radius: 7.63rem;
+  font-family: Sugar Bomb;
+  font-weight: 400;
+  font-size: 3rem;
+  color: #FFD52D;
+  margin-bottom: 0.5em;
+}
+
+.story-btn {
+  font-family: Sugar Bomb;
+  background-color: #D2570C;
+  width: 15.63rem;
+  border: none;
+  padding: 0.25em;
+  box-shadow: 21px 12px 24px rgba(0, 0, 0, 0.25), inset 22px 14px 38px -11px rgba(0, 0, 0, 0.43);
+  border-radius: 7.625rem;
+  font-family: Sugar Bomb;
+  font-weight: 400;
+  font-size: 3rem;
+  color: #FFD52D;
+}
+/* covid rush buttons end */
+
+/* hover animation in buttons start */
+.play-btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.story-btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+/* hover animation in buttons end */
+
+/* covid images animation start */
+.covid-images {
+  position: relative;
+  width: 37.5rem;
+}
+
+.covid-image-1 {
+  width: 9.38rem;
+  height: 9.38rem;
+  animation: breathing 2s ease-out infinite normal;
+  position: absolute;
+  left: 12%;
+  top: -15%;
+}
+
+.covid-image-2 {
+  width: 23.125rem;
+  height: 22.125rem;
+  animation: breathing 1s ease-out infinite normal;
+  position: absolute;
+  left: 70%;
+  top: 5%;
+}
+
+.covid-image-3 {
+  width: 9.375rem;
+  height: 9.375rem;
+  animation: breathing 1.2s ease-out infinite normal;
+  position: absolute;
+  left: 60%;
+  top: 70%;
+}
+
+.covid-image-4 {
+  width: 18.75rem;
+  height: 18.75rem;
+  animation: breathing 1.2s ease-out infinite normal;
+  position: absolute;
+  left: -20%;
+  top: 18%;
+}
+/* covid images animation end */
+
+/* canvas boy running sprite start */
+#canvas-boy-running {
+  position: absolute;
+  top: 76%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  width: 12rem;
+  height: 21.875rem;
+}
+/* canvas boy running sprite end */
+
+@keyframes breathing {
+  0% {
+    transform: scale(0.8);
+  }
+
+  25% {
+    transform: scale(0.9);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+/* ------------------------ STORY PAGE ---------------------------- */
+
+/* STORY PAGE 1 */
+#story-container1 {
+  display: none;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.storyline1-inner-container{
+  width: 55%;
+  height: 60%;
+}
+
+.storyline1 {
+  text-align: center;
+}
+
+.storyline-text {
+  font-family: Anime Ace;
+  color: #FFD72D;
+  font-size: 2.5rem;
+}
+
+.red-covids {
+  position: relative;
+  height: 60%;
+}
+
+#red-covid-1 {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  animation: breathing 1.2s ease-out infinite normal;
+  width: 15rem;
+}
+
+#red-covid-2 {
+  left: 30%;
+  position: absolute;
+  animation: breathing 1.2s ease-out infinite normal;
+  width: 25rem;
+}
+
+#red-covid-3 {
+  top: 60%;
+  left: 60%;
+  position: absolute;
+  animation: breathing 1.2s ease-out infinite normal;
+  width: 15rem;
+}
+
+.next-btn-story {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  left: 90%;
+  top: 83%;
+}
+
+.next-btn-img {
+  height: 6.25rem;
+  width:  6.25rem;
+}
+
+.next-btn-story:hover{
+  scale: 1.1;
+}
+
+#button1, #button2, #button3 {
+  display: none;
+}
+
+/* STORY PAGE 2 */
+
+#story-container2 {
+  display: none;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.storyline2-inner-container{
+  width: 55%;
+  height: 60%;
+  display: grid;
+  place-items: center;
+}
+
+.storyline2 {
+  text-align: center;
+}
+
+.boywave {
+  width: 13rem;
+  height: 20rem;
+}
+
+/* STORY PAGE 3 */
+
+#story-container3 {
+  display: none;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.storyline3-inner-container{
+  width: 50%;
+  height: 60%;
+  display: grid;
+  place-items: left;
+}
+
+.storyline3 {
+  text-align: right;
+}
+
+#button3 {
+  font-family: Sugar Bomb;
+  background-color: #D2570C;
+  width: 15.63rem;
+  border: none;
+  padding: 1rem 0.25rem ;
+  box-shadow: 21px 12px 24px rgba(0, 0, 0, 0.25), inset 22px 14px 38px -11px rgba(0, 0, 0, 0.43);
+  border-radius: 7.625rem;
+  font-family: Sugar Bomb;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #FFD52D;
+  position: absolute;
+  left: 80%;
+  top: 83%;
+}
+
+#button3:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+}
+/* ------------------------ END STORY PAGE ---------------------------- */
+
+/* ------------------- TUTORIAL PAGE -------------------------- */
+#tutorial-container {
+  display: none;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+  align-content: center;
+}
+
+.press-img {
+  height: 12rem;
+}
+
+.instructions {
+  font-family: Anime Ace;
+  color: #FFD72D;
+  font-size: 2.5rem;
+  line-height: 5rem;
+}
+
+.command-image {
+  height: 4rem;
+  width: 4rem;
+}
+
+#button4 {
+  display: none;
+}
+/* ------------------- END INSTRUCTIONS PAGE -------------------------- */
+
+/* ------------------------ AVOID PAGE ---------------------------- */
+#avoid-container {
+  display: none;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+  align-content: center;
+}
+
+.avoid-image {
+  height: 15rem;
+}
+
+.avoid-text-container{
+  width: 55%;
+  height: 60%;
+}
+
+.avoid-text {
+  font-family: Anime Ace;
+  color: #FFD72D;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.avoid-covid-image-1 {
+  width: 9.38rem;
+  height: 9.38rem;
+  animation: breathing 2s ease-out infinite normal;
+  position: absolute;
+  left: 10%;
+  top: -40%;
+}
+
+.avoid-covid-image-2 {
+  width: 18.75rem;
+  height: 18.75rem;
+  animation: breathing 1s ease-out infinite normal;
+  position: absolute;
+  left: 75%;
+  top: -40%;
+}
+
+.avoid-covid-image-3 {
+  width: 18.75rem;
+  height: 18.75rem;
+  animation: breathing 1.2s ease-out infinite normal;
+  position: absolute;
+  left: -32%;
+  top: 2%;
+}
+
+#back-to-home-btn {
+  display: none;
+  position: absolute;
+  left: 75%;
+  top: 83%;
+  background-color: #D2570C;
+  width: 20rem;
+  border: none;
+  padding: 0.5em;
+  box-shadow: 21px 12px 24px rgba(0, 0, 0, 0.25), inset 22px 14px 38px -11px rgba(0, 0, 0, 0.43);
+  border-radius: 7.63rem;
+  font-family: Sugar Bomb;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #FFD52D;
+  margin-bottom: 0.5em;
+}
+
+#back-to-home-btn:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+}
+/* ------------------------ END AVOID PAGE ---------------------------- */
+
+#next-btn-story{
+  display: none;
+}
+
+#next-btn-story, #next-btn-instructions, #next-btn-avoid {
+  position: absolute;
+  left: 90%;
+  top: 85%;
+  background: transparent;
+  border: none;
+}
+
+#next-btn-instructions, #next-btn-avoid {
+  display: none;
+}
+
+#next-btn-story:hover, #next-btn-instructions:hover, #next-btn-avoid:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* ------------------------ GAME ---------------------------- */
+#canvas1 {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  position: absolute;
+  top: 0%;
+}
+
+.game-over-container {
+  position: absolute;
+  top: 0%;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.532);
+  display: none;
+  place-items: center;
+  grid-template-columns: 1fr;
+  z-index: 10;
+}
+
+.game-over-inner-container{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+#game-over{
+  width: 65%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.buttons {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  top: 32rem;
+}
+
+#try-again{
+  border: none;
+  font-family: 'Sugar Bomb';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.813rem;
+  text-align: center;
+  color: #FFD52D;
+  background: #D2570C;
+  box-shadow: 21px 12px 24px rgba(0, 0, 0, 0.25), inset 22px 14px 38px -11px rgba(0, 0, 0, 0.43);
+  border-radius: 7.625rem;
+  margin: 0;
+  padding: 1.69rem 4.38rem;
+}
+
+#back-home{
+  border: none;
+  font-family: 'Sugar Bomb';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.19rem;
+  text-align: center;
+  color: #FFD52D;
+  background: #D2570C;
+  box-shadow: 21px 12px 24px rgba(0, 0, 0, 0.25), inset 22px 14px 38px -11px rgba(0, 0, 0, 0.43);
+  border-radius: 122px;
+  margin: .5rem;
+  padding: 1.56rem 3.125rem;
+}
+
+#playerImage, #backgroundImage, #enemyImage, #backgroundCity, #enemy_3, #backgroundMars, #enemy_4 {
+  display: none;
+}
+
+#try-again:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+#back-home:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+
+/* MEDIA QUERIES */
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1000px) {
+  :root {
+    font-size: 12px
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  :root {
+    font-size: 14px
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  :root {
+    font-size: 16px
+  }
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  :root {
+    font-size: 18px
+  }
+}

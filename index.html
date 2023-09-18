@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- start page css -->
+  <link rel="stylesheet" href="style.css">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/favicon/covid-rush-icon.png" type="image/x-icon">
+  <script src="script.js" defer></script>
+  <title>COVID Rush</title>
+</head>
+<body>
+  <audio autoplay loop="loop" src="./assets/sound-effects/opening-bg.mp3" id="opening-bg"></audio>
+  <!-- HOME PAGE -->
+  <div id="start-container">
+    <div class="covid-images">
+      <img src="./assets/virus/red-rim-light/coronavirus-red-rim-light-attack_1.png" alt="COVID Icon" class="covid-image-1">
+      <img src="./assets/virus/red-rim-light/coronavirus-red-rim-light-attack_1.png" alt="COVID Icon" class="covid-image-2">
+      <img src="./assets/virus/red-rim-light/coronavirus-red-rim-light-attack_1.png" alt="COVID Icon" class="covid-image-3">
+      <img src="./assets/virus/red-rim-light/coronavirus-red-rim-light-hit_05.png" alt="COVID Icon" class="covid-image-4">
+      <img src="./assets/logo/covid-rush-logo.png" alt="covid-rush-logo" class="covid-rush-logo">
+    </div>
+    <div class="buttons-start">
+      <button class="button play-btn" id="play-btn">Play</button>
+      <button class="button story-btn" id="story-btn">Story</button>
+    </div>
+  </div>
+  <canvas id="canvas-boy-running"></canvas>
+
+  <!-- STORY AND INSTRUCTIONS PAGE -->
+  <div id="story-container1">
+    <div class="storyline1-inner-container">
+        <div class="storyline1">
+        <p class="storyline-text">The year is 2020 and a new virus called COVID-19 has swept the world, causing widespread panic and chaos... </p>
+        </div>
+        <div class="red-covids">
+          <img id="red-covid-1" src="./assets/virus/red-rim-light/coronavirus-red-rim-light-attack_1.png" alt="">
+          <img id="red-covid-2" src="./assets/virus/red-rim-light/coronavirus-red-rim-light-attack_6.png" alt="">
+          <img id="red-covid-3" src="./assets/virus/red-rim-light/coronavirus-red-rim-light-attack_1.png" alt="">
+        </div>
+        <button id="button1" class="button next-btn-story"><img src="./assets/buttons/next-btn.png" class="next-btn-img"></button>
+    </div>
+  </div>
+  <div id="story-container2">
+    <div class="storyline2-inner-container">
+        <div class="storyline2">
+        <p class="storyline-text">You play as a survivor who must navigate through this difficult time and your moves will determine the outcome of your story.</p>
+        </div>
+        <img class="boywave" src="./assets/boywave.png" alt="">
+        <button id="button2" class="button next-btn-story"><img src="./assets/buttons/next-btn.png" class="next-btn-img"></button>
+    </div>
+  </div>
+  <div id="story-container3">
+    <div class="storyline3-inner-container">
+        <div class="storyline3">
+        <p class="storyline-text">The choices you <br>make will determine your <br>fate in this world changed <br>by the pandemic...</p>
+        </div>
+        <img class="boywave boywave2" src="./assets/boywave.png" alt="boy-wave">
+        <button id="button3" class="button">Tutorial</button>
+    </div>
+  </div>
+
+  <!-- TUTORIAL -->
+  <div id="tutorial-container">
+    <div class="press-img-container">
+      <img class="press-img" src="./assets/logo/press.png" alt="press-image">
+    </div>
+    <div class="instructions-container">
+      <p class="instructions jump">Press <img class="command-image" src="./assets/buttons/jump.png" alt="jump-button"> to Jump</p>
+      <p class="instructions run">Press <img class="command-image" src="./assets/buttons/run.png" alt="run-button"> to Run</p>
+    </div>
+    <button id="button4" class="button next-btn-story"><img src="./assets/buttons/next-btn.png" class="next-btn-img"></button>
+  </div>
+
+  <!-- AVOID -->
+  <div id="avoid-container">
+    <div class="covid-images">
+      <img src="./assets/virus/red-rim-light/coronavirus-red-rim-light-attack_1.png" alt="COVID Icon" class="avoid-covid-image-1">
+      <img src="./assets/virus/red-rim-light/coronavirus-red-rim-light-attack_1.png" alt="COVID Icon" class="avoid-covid-image-2">
+      <img src="./assets/virus/red-rim-light/coronavirus-red-rim-light-hit_05.png" alt="COVID Icon" class="avoid-covid-image-3">
+      <img src="./assets/logo/avoid.png" alt="avoid-image" class="avoid-image">
+    </div>
+    <div class="avoid-text-container">
+      <p class="avoid-text">Colliding with a COVID-19 monster will get you infected and lose the game</p>
+    </div>
+    <div class="avoid-buttons">
+      <button class="button back-to-home-btn" id="back-to-home-btn">Back to Home</button>
+    </div>
+  </div>
+
+  <!-- GAME -->
+  <div class="game-over-container">
+    <div class="game-over-inner-container">
+      <img src="./assets/logo/game-over.png" alt="game-over-picture" id="game-over">
+      <div class="buttons">
+          <button id="try-again" class="button">Try Again</button>
+          <button id="back-home" class="button">Back to Home</button>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <canvas id="canvas1"></canvas>
+  <img id="playerImage" src="./assets/boy.png">
+  <img id="enemyImage" src="./assets/enemy_2.png">
+  <img id="enemy_3" src="./assets/enemy_3.png">
+  <img id="enemy_4" src="./assets/enemy_4.png">
+</body>
+</html>
